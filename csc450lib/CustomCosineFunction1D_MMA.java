@@ -74,9 +74,19 @@ public class CustomCosineFunction1D_MMA extends Function1D {
 	public String getExpression() 
 	{
 		
-		String expression = "F[x_]:= Cos[((x^2)/(2*Pi)) + Pi] + 4";
+		String expression = "F[x_]:= Cos[((x^2)/(2*Pi)) + Pi]";
 		
 		return expression;
 		
+	}
+	
+	/**
+	 * To be implemented by child classes. Returns a boolean revealing
+	 * whether the implementation of the derivative gives an exact result.
+	 * @return Boolean describing whether the derivative is exact.
+	 */
+	public boolean derivativeIsExact()
+	{
+		return false;
 	}
 }

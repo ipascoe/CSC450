@@ -152,7 +152,7 @@ public class NonlinearSolver1D
 	}
 	
 	/**
-	 * This custom algorithm uses a mix of bisection and the secant algorithm to find
+	 * This custom algorithm uses a mix of bisection and Newton-Rhapson to find
 	 * the root of a nonlinear function. It first splits the search interval to a
 	 * certain extent (0.01), then uses the Newton-Rhapson algorithm to iterate along
 	 * the smaller interval to find the root.

@@ -18,7 +18,11 @@ public enum CSC450ErrorCode
 	DOMAIN_OF_DEF_BAD_FORMAT(1, "Incorrect format for Domain of Definition"),
 	
 	//	100-199 error codes for calculus-related exceptions 
-	FUNCTION_NOT_DEFINED_AT_EVALUATION_POINT(100, "Function is not defined at evaluation point");
+	FUNCTION_NOT_DEFINED_AT_EVALUATION_POINT(100, "Function is not defined at evaluation point"),
+	
+	ROOT_NOT_FOUND_IN_INTERVAL(101, "Root was not found in the interval provided."),
+	
+	INVALID_SEARCH_BRACKET(102, "Function is the same sign at both endpoints or both endpoints are equal");
 	
 	//	200-299 error codes for linear algebra-related exceptions
 	

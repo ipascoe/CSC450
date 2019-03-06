@@ -35,7 +35,7 @@ public class CustomLogarithmicFunction1D extends Function1D {
 			e.printStackTrace();
 		}
 		
-		returnValue = (float) ((float)2*Math.log(x+1));
+		returnValue = (float) (2*Math.log((Math.pow(x, 5)+1)/(Math.pow(x,3)+5)));
 		
 		return returnValue;
 	}
@@ -45,7 +45,17 @@ public class CustomLogarithmicFunction1D extends Function1D {
 	 * @return String expression
 	 */
 	public String getExpression() {
-		return "F[x_]:= 2*Log[x+1]";
+		return "F[x_]:= 2*Log[((x^5)+1)/((x^3)+5)]";
+	}
+	
+	/**
+	 * To be implemented by child classes. Returns a boolean revealing
+	 * whether the implementation of the derivative gives an exact result.
+	 * @return Boolean describing whether the derivative is exact.
+	 */
+	public boolean derivativeIsExact()
+	{
+		return false;
 	}
 
 }

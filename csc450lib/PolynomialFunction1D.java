@@ -73,5 +73,15 @@ public class PolynomialFunction1D extends Function1D
 		
 		return expression;
 	}
+	
+	/**
+	 * To be implemented by child classes. Returns a boolean revealing
+	 * whether the implementation of the derivative gives an exact result.
+	 * @return Boolean describing whether the derivative is exact.
+	 */
+	public boolean derivativeIsExact()
+	{
+		return false;
+	}
 
 }
