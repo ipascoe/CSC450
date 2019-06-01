@@ -36,7 +36,7 @@ public class CustomCosineFunction1D extends Function1D {
 			e.printStackTrace();
 		}
 		
-		return (float)Math.cos(((Math.pow(x, 2))/(2*Math.PI)) + Math.PI);	
+		return (float)Math.cos((Math.pow(x,2)+3)/(x+1));	
 		
 	}
 
@@ -47,7 +47,7 @@ public class CustomCosineFunction1D extends Function1D {
 	public String getExpression() 
 	{
 		
-		String expression = "F[x_]:= Cos[((x^2)/(2*Pi)) + Pi]";
+		String expression = "F[x_]:= Cos[(x^2+3)/(x+1)]";
 		
 		return expression;
 		

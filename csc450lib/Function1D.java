@@ -111,7 +111,7 @@ public abstract class Function1D
 	{
 		float result=0;
 		float h = 1f;
-		for(int n=2, i=1; n<Math.pow(2, 10); n=(int) Math.pow(2, i), i++)
+		for(int n=2, i=1; n<Math.pow(2, 8); n=(int) Math.pow(2, i), i++)
 			result = (float) (this.lApprox(x, h/n) + ((this.lApprox(x, h/n) - this.lApprox(x, (float) (h/Math.pow(2, i-1))))/(Math.pow(4, i)-1)));
 		return result;
 	}
